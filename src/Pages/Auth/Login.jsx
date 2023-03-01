@@ -5,8 +5,8 @@ import { yellow } from "@mui/material/colors";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
-import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
+import { Link } from 'react-router-dom'
 
 function Copyright(props) {
   return (
@@ -46,10 +46,11 @@ function Login() {
           <TextField
             required
             fullWidth
+            autoFocus
             margin="normal"
             id="outlined-required"
             label="Email Address"
-            defaultValue="Hello World"
+            type='email'
           />
           <TextField
             required
@@ -80,7 +81,7 @@ function Login() {
               </Link>
             </Grid>
             <Grid item xs>
-              <Link href="#" variant="body2">
+              <Link to='/signup'>
                 Don't have an account? Sign Up
               </Link>
             </Grid>
