@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "@mui/material/Container";
 import { Avatar, Box, Button, TextField, Typography } from "@mui/material";
 import { yellow } from "@mui/material/colors";
@@ -6,7 +6,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import Grid from "@mui/material/Grid";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Copyright(props) {
   return (
@@ -17,7 +17,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://github.com/Wooonster">
+      <Link color="inherit" to="https://github.com/Wooonster">
         King's Notes
       </Link>{" "}
       {new Date().getFullYear()}
@@ -27,6 +27,12 @@ function Copyright(props) {
 }
 
 function Login() {
+
+  const navigate = useNavigate()
+  const handleClick = () => {
+    navigate('/homepage')
+  }
+
   return (
     <Container maxWidth="sm">
       {/* head */}
@@ -71,6 +77,7 @@ function Login() {
             type="submit"
             variant="contained"
             sx={{ mt: 1.5, mb: 2 }}
+            onClick={handleClick}
           >
             Signin
           </Button>

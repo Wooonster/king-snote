@@ -22,7 +22,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://github.com/Wooonster">
+      <Link color="inherit" to="https://github.com/Wooonster">
         King's Notes
       </Link>{" "}
       {new Date().getFullYear()}
@@ -94,7 +94,7 @@ function Signup() {
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
-              <Link to="/login">Aready had an account? Sign In</Link>
+              <Link to="/">Aready had an account? Sign In</Link>
             </Grid>
           </Grid>
         </Box>
